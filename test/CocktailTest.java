@@ -1,8 +1,8 @@
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.core.IsCollectionContaining.hasItem;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
+import static org.junit.matchers.JUnitMatchers.hasItem;
 
 public class CocktailTest {
 
@@ -20,7 +20,10 @@ public class CocktailTest {
     @Test
     public void shouldVerifyPinaColada() throws Exception {
         // Given
-        Cocktail cocktail = null;//?;
+        Cocktail cocktail = new StandardCocktail();
+        cocktail = new DecoratorRum(cocktail);
+        cocktail = new DecoratorCoconut(cocktail);
+        cocktail = new DecoratorPinapple(cocktail);
 
         // then
         //every item costs 1.0
@@ -35,7 +38,9 @@ public class CocktailTest {
     @Test
     public void shouldVerifyTimsWeirdMix() throws Exception {
         // Given
-        Cocktail cocktail = null;//?;
+        Cocktail cocktail = new StandardCocktail();
+        cocktail = new DecoratorCoconut(cocktail);
+        cocktail = new DecoratorStrawberry(cocktail);
 
         // then
         //every item costs 1.0
