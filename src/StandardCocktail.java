@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public class StandardCocktail extends Cocktail {
@@ -9,6 +9,8 @@ public class StandardCocktail extends Cocktail {
 
     @Override
     public List<String> getIngredients() {
-        return Arrays.asList("ice cubes");
+        List ingredients = new ArrayList();
+        ingredients.add("ice cubes");
+        return ingredients;
     }
 }

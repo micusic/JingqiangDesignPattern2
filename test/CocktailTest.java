@@ -20,9 +20,10 @@ public class CocktailTest {
     @Test
     public void shouldVerifyPinaColada() throws Exception {
         // Given
-	Cocktail cocktail = null;//?;
+        Cocktail cocktail = null;//?;
 
         // then
+        //every item costs 1.0
         assertThat(cocktail.getPrice(), equalTo(4.0));
         assertThat(cocktail.getIngredients(), hasItem("ice cubes"));
         assertThat(cocktail.getIngredients(), hasItem("rum"));
@@ -34,10 +35,11 @@ public class CocktailTest {
     @Test
     public void shouldVerifyTimsWeirdMix() throws Exception {
         // Given
-	Cocktail cocktail = null;//?;
+        Cocktail cocktail = null;//?;
 
         // then
-        assertThat(cocktail.getPrice(), equalTo(2.0));
+        //every item costs 1.0
+        assertThat(cocktail.getPrice(), equalTo(3.0));
         assertThat(cocktail.getIngredients(), hasItem("ice cubes"));
         assertThat(cocktail.getIngredients(), hasItem("coconut milk"));
         assertThat(cocktail.getIngredients(), hasItem("strawberry icecream"));
