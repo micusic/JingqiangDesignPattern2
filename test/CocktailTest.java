@@ -20,7 +20,7 @@ public class CocktailTest {
     @Test
     public void shouldVerifyPinaColada() throws Exception {
         // Given
-        Cocktail cocktail = new StandardCocktail();
+	Cocktail cocktail = null;//?;
 
         // then
         assertThat(cocktail.getPrice(), equalTo(4.0));
@@ -34,7 +34,7 @@ public class CocktailTest {
     @Test
     public void shouldVerifyTimsWeirdMix() throws Exception {
         // Given
-        Cocktail cocktail = new StandardCocktail();
+	Cocktail cocktail = null;//?;
 
         // then
         assertThat(cocktail.getPrice(), equalTo(2.0));
